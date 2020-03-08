@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/login_form"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/login_background"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <EditText
+        android:id="@+id/phone_ed_txt"
+        style="@style/input_style"
+        android:layout_height="50dp"
+        android:hint="@string/phone_number"
+        android:drawableLeft="@drawable/profile_icon"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="46dp"
+        android:inputType="phone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/code_ed_txt"
+        style="@style/input_style"
+        android:drawableLeft="@drawable/password_icon"
+        android:layout_height="50dp"
+        android:layout_marginTop="46dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:hint="@string/four_digit_code"
+        android:inputType="numberPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_ed_txt" />
+
+    <CheckBox
+        android:id="@+id/remember_chk_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/check_box_bg"
+        android:layout_marginTop="40dp"
+        android:text="@string/remember_login"
+        android:textColor="@color/colorWhite"
+        android:paddingLeft="10dp"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/code_ed_txt"
+        app:layout_constraintTop_toBottomOf="@+id/code_ed_txt" />
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        style="@style/button_style"
+        android:text="@string/sing_in"
+        app:layout_constraintEnd_toEndOf="@+id/code_ed_txt"
+        app:layout_constraintStart_toStartOf="@+id/remember_chk_box"
+        app:layout_constraintTop_toBottomOf="@+id/remember_chk_box" />
+</androidx.constraintlayout.widget.ConstraintLayout>
